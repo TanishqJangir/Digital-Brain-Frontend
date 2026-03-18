@@ -9,6 +9,7 @@ import { SharedVault } from "./pages/SharedVault";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./features/auth/routes/ProtectedRoute";
 import PublicRoute from "./features/auth/routes/PublicRoute";
+import  PageNotFound  from "./pages/NotFound";
 
 function App() {
   return (
@@ -60,7 +61,7 @@ function App() {
 
         <Route path="/share/:shareLink" element={<SharedVault />} />
 
-
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
