@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import loadingSpinner from "../../../assets/logos/loading.png";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const FRONTEND_URL = import.meta.env.VITE_FRONTEND_URL;
 
 const Settings = ({ onOpen, onClose, userData, onSuccess }: {
     onOpen: boolean;
@@ -136,7 +137,7 @@ const Settings = ({ onOpen, onClose, userData, onSuccess }: {
                 }
             });
             const link = response.data.shareLink;
-            navigator.clipboard.writeText(`${BACKEND_URL}/share/${link}`);
+            navigator.clipboard.writeText(`${FRONTEND_URL}/share/${link}`);
             toast.success("Link copied to clipboard!");
         } catch (error: any) {
             toast.error(error.response?.data?.message || "Failed to copy link");
