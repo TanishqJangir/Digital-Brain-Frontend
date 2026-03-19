@@ -36,11 +36,11 @@ function App() {
           </PublicRoute>
         } />
 
-        <Route path="/forgot-password" element={
+        {/* <Route path="/forgot-password" element={
           <PublicRoute>
             <ForgetPassword />
           </PublicRoute>
-        } />
+        } /> */}
 
 
         <Route path="/signup" element={
