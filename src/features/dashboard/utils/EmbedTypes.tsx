@@ -115,7 +115,7 @@ export const EmbedLinks = ({ type, customType, url }: {
         return (
             <div className="w-full aspect-video rounded-xl flex flex-col items-center justify-center bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-400">
                 <NotionIcon className="h-8" />
-                No Preview Available
+                Preview Not Available
             </div>
         );
     }
@@ -124,7 +124,7 @@ export const EmbedLinks = ({ type, customType, url }: {
         return (
             <div className="w-full aspect-video rounded-xl flex flex-col items-center justify-center bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-400">
                 <GithubIcon className="size-8" />
-                No Preview Available
+                Preview Not Available
             </div>
         );
     }
