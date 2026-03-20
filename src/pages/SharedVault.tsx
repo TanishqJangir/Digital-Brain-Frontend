@@ -127,7 +127,7 @@ export const SharedVault = () => {
             </header>
 
             {/* Content Display */}
-            <main className="max-w-7xl mx-auto px-6 pt-8">
+            <main className="max-w-rull px-6 pt-8">
                 <div className="mb-8 sm:hidden flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white text-sm font-bold shrink-0">
                         {data.avatar ? (
