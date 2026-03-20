@@ -144,8 +144,8 @@ export const SharedVault = () => {
 
                 {data.contents.length === 0 ? (
                     <div className="flex flex-col items-center justify-center py-20 text-center">
-                        <div className="w-24 h-24 mb-6 rounded-3xl bg-gray-100 dark:bg-white/5 flex items-center justify-center">
-                            <img src={brainLogo} alt="Brainly Logo" className="size-10 text-gray-300 dark:text-gray-600 opacity-50 grayscale" />
+                        <div className="w-24 h-24 mb-6 rounded-3xl bg-brand/80 dark:bg-white/5 flex items-center justify-center">
+                            <img src={brainLogo} alt="Brainly Logo" className="size-13 brightness-100 dark:text-gray-600 dark:opacity-50" />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">This vault is empty</h3>
                         <p className="text-gray-500 dark:text-gray-400 max-w-md">
