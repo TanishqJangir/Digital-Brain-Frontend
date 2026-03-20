@@ -88,7 +88,7 @@ export const Card = ({ _id, contentId, title, description, type, customType, url
                         )}
 
                     </div>
-                    <div className="flex items-center justify-between mt-auto">
+                    <div className="flex items-center justify-between mt-3">
                         <p className="text-xs text-gray-400 dark:text-gray-600 mt-auto">
                             {createdAt ? new Date(createdAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : ""}
                         </p>

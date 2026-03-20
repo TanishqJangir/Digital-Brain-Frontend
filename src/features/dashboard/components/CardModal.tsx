@@ -53,7 +53,7 @@ const CardModal = ({ contentId, title, description, url, type, customType, tags,
                                 <p className="text-xs text-gray-400 dark:text-gray-600 mt-auto">
                                     {createdAt ? new Date(createdAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : ""}
                                 </p>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 mt-6">
                                     <Button
                                         variant="open"
                                         onClick={() => window.open(url, "_blank")}

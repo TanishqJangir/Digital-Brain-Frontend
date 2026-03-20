@@ -151,15 +151,15 @@ const AddContentModal = ({ setModalOpen, onSuccess }: ModalProps) => {
                         <label className={labelClass}>Title <span className="text-red-400">*</span></label>
                         <Input
                             type="text"
-                            maxLength={50}
+                            maxLength={100}
                             placeholder="Enter title"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                             className="dark:bg-[#1c1c1c] dark:text-white border-gray-200! dark:border-white/10!"
                             required
                         />
-                        <p className={`text-xs text-gray-400 text-right mt-1 leading-none ${title.length === 50 ? "text-red-400" : ""}`}>
-                            {title.length}/50
+                        <p className={`text-xs text-gray-400 text-right mt-1 leading-none ${title.length === 100 ? "text-red-400" : ""}`}>
+                            {title.length}/100
                         </p>
                     </div>
 
@@ -221,10 +221,20 @@ const AddContentModal = ({ setModalOpen, onSuccess }: ModalProps) => {
                             value={tagsInput}
                             onChange={(e) => {
                                 const value = e.target.value;
-                                const count = value ? value.split(",").map(tag => tag.trim()).filter(Boolean).length : 0;
-                                if (count < 5 || (count === 5 && !value.endsWith(","))) {
+
+                                const tags = value
+                                    .split(",")
+                                    .map(tag => tag.trim())
+                                    .filter(Boolean);
+
+                                const isValidCount = tags.length < 5 || (tags.length === 5 && !value.endsWith(","));
+
+                                const isValidLength = tags.every(tag => tag.length <= 15);
+
+                                if (isValidCount && isValidLength) {
                                     setTagsInput(value);
                                 }
+
                             }}
                             onBlur={() => setTags(tagsInput.split(",").map(tag => tag.trim()).filter(Boolean))}
                             className="dark:bg-[#1c1c1c] dark:text-white border-gray-200! dark:border-white/10!"
@@ -238,13 +248,13 @@ const AddContentModal = ({ setModalOpen, onSuccess }: ModalProps) => {
                         <label className={labelClass}>Description <span className="font-normal text-gray-400">(optional)</span></label>
                         <textarea
                             rows={3}
-                            maxLength={150}
+                            maxLength={180}
                             placeholder="Add a short note..."
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             className={textareaClass} />
-                        <p className={`text-xs text-gray-400 text-right mt-1 ${description.length === 150 ? "text-red-400" : ""}`}>
-                            {description.length}/150
+                        <p className={`text-xs text-gray-400 text-right mt-1 ${description.length === 180 ? "text-red-400" : ""}`}>
+                            {description.length}/180
                         </p>
                     </div>
                     {/* </>
