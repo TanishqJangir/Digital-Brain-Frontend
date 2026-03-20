@@ -160,6 +160,7 @@ export const SharedVault = () => {
                                 _id={item._id}
                                 contentId={item._id}
                                 title={item.title}
+                                description={item.description}
                                 url={item.url}
                                 type={item.type}
                                 tags={item.tags || []}
